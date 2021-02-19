@@ -18,9 +18,9 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    a.setOrganizationName("CodeRush");
-    a.setOrganizationDomain("coderush.me");
-    a.setApplicationName("UEFITool");
+    a.setOrganizationName("Blair Technology Group LLC");
+    a.setOrganizationDomain("blairtg.com");
+    a.setApplicationName("BTGBuildUEFITool");
 
     UEFITool w;
     w.setProgramPath(a.arguments().at(0));

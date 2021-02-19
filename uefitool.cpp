@@ -28,7 +28,7 @@ version(tr(PROGRAM_VERSION))
     ffsEngine = NULL;
 
     // Set window title
-    this->setWindowTitle(tr("UEFITool %1").arg(version));
+    this->setWindowTitle(tr("BTGBuildUEFITool %1").arg(version));
 
     // Connect signals to slots
     connect(ui->actionOpenImageFile, SIGNAL(triggered()), this, SLOT(openImageFile()));
@@ -98,7 +98,7 @@ void UEFITool::init()
     ui->infoEdit->clear();
 
     // Set window title
-    this->setWindowTitle(tr("UEFITool %1").arg(version));
+    this->setWindowTitle(tr("BTGBuildUEFIToolUEFITool %1").arg(version));
 
     // Disable menus
     ui->menuCapsuleActions->setDisabled(true);
@@ -528,10 +528,9 @@ void UEFITool::extract(const UINT8 mode)
 
 void UEFITool::about()
 {
-    QMessageBox::about(this, tr("About UEFITool"), tr(
-        "Copyright (c) 2015, Nikolaj Schlej aka <b>CodeRush</b>.<br>"
-        "Program icon made by <a href=https://www.behance.net/alzhidkov>Alexander Zhidkov</a>.<br><br>"
-        "The program is dedicated to <b>RevoGirl</b>. Rest in peace, young genius.<br><br>"
+    QMessageBox::about(this, tr("About BTGBuildUEFITooll"), tr(
+        "Copyright (c) 2021, Max Graman"
+        "Program icon made by Alexander Zhidkov.<br><br>"
         "The program and the accompanying materials are licensed and made available under the terms and conditions of the BSD License.<br>"
         "The full text of the license may be found at <a href=http://opensource.org/licenses/bsd-license.php>OpenSource.org</a>.<br><br>"
         "<b>THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN \"AS IS\" BASIS, "
@@ -618,7 +617,7 @@ void UEFITool::openImageFile(QString path)
     inputFile.close();
 
     init();
-    this->setWindowTitle(tr("UEFITool %1 - %2").arg(version).arg(fileInfo.fileName()));
+    this->setWindowTitle(tr("BTGBuildUEFITool %1 - %2").arg(version).arg(fileInfo.fileName()));
 
     UINT8 result = ffsEngine->parseImageFile(buffer);
     showMessages();
