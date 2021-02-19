@@ -22,8 +22,8 @@ WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    a.setOrganizationName("LongSoft");
-    a.setOrganizationDomain("longsoft.me");
+    a.setOrganizationName("");
+    a.setOrganizationDomain("");
     a.setApplicationName("UEFIPatch");
 
     UEFIPatch w;
